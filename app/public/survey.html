@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <title>Survey | Friend Finder</title>
+  </head>
+  <body style="background-image: url('https://mastermarketingupv.com/wp-content/uploads/2018/05/Dark-Grey-Background-Best-Wallpaper-Gallery-dji6x-Free.jpg')">
+
+        <div class="modal" tabindex="-1" role="dialog" id="show-results">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">New Match found</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="picFound" src="" alt="https://sainfoinc.com/wp-content/uploads/2018/02/image-not-available.jpg" class="img-thumbnail">
+                      <h2 id="nameFound"></h2>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        
+    <div class="jumbotron" >
+            <h1 class="display-4">
+                    <i class="fa fa-street-view"></i> Friend Finder App | Survey </h1>
+        <p class="lead">Meet your perfect match by answering the survey</p>
+        <hr class="my-4">
+        <form>
+            
+            <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <label for="name" style="float:right">First name</label>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input type="text" class="form-control " id="name" placeholder="First name"  required>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <label for="userPic" style="float:right">Profile Pic (URL link)</label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <input type="text" class="form-control " id="userPic"  required><button id='paste'><i class="fa fa-clipboard " aria-hidden="true"></i> Paste URL</button>
+            </div>
+            </div>
+
+            
+            <hr class="my-4">
+                <div class="row">
+  
+                        <div class="col">
+                                <label class="mr-sm-2 " for="Q1" style="float:right">Q1-You prefer to go to the beach than to the countryside</label>
+                        </div>
+                        <div class="col">
+                                <select class="custom-select mr-sm-2" id="Q1">
+                                    <option selected>Choose...</option>
+                                    <option value="1">1 (Strongly Disagree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Agree)</option>                
+                                </select>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                            <div class="col">
+                                    <label class="mr-sm-2 " for="Q2" style="float:right">Q2-You prefer to see movies in home than in teather </label>
+                            </div>
+                            <div class="col">
+                                    <select class="custom-select mr-sm-2" id="Q2">
+                                        <option selected>Choose...</option>
+                                        <option value="1">1 (Strongly Disagree)</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5 (Strongly Agree)</option>                
+                                    </select>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                                <div class="col">
+                                        <label class="mr-sm-2 " for="Q3" style="float:right">Q3-You frequenly go to concerts </label>
+                                </div>
+                                <div class="col">
+                                        <select class="custom-select mr-sm-2" id="Q3">
+                                            <option selected>Choose...</option>
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>                
+                                        </select>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                    <div class="col">
+                                            <label class="mr-sm-2 " for="Q4" style="float:right">Q4- It is often difficult for you to relate to other people’s feelings </label>
+                                    </div>
+                                    <div class="col">
+                                            <select class="custom-select mr-sm-2" id="Q4">
+                                                <option selected>Choose...</option>
+                                                <option value="1">1 (Strongly Disagree)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5 (Strongly Agree)</option>                
+                                            </select>
+                                    </div>
+                                  </div>                        
+                                  
+                                  <div class="row">
+                                        <div class="col">
+                                                <label class="mr-sm-2 " for="Q5" style="float:right">Q5- You often go out to party</label>
+                                        </div>
+                                        <div class="col">
+                                                <select class="custom-select mr-sm-2" id="Q5">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1 (Strongly Disagree)</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5 (Strongly Agree)</option>                
+                                                </select>
+                                        </div>
+                                      </div> 
+
+                                      <div class="row">
+                                            <div class="col">
+                                                    <label class="mr-sm-2 " for="Q6" style="float:right">Q6-You enjoy to study and learn new things in you free time </label>
+                                            </div>
+                                            <div class="col">
+                                                    <select class="custom-select mr-sm-2" id="Q6">
+                                                        <option selected>Choose...</option>
+                                                        <option value="1">1 (Strongly Disagree)</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5 (Strongly Agree)</option>                
+                                                    </select>
+                                            </div>
+                                          </div>
+
+                                          <div class="row">
+                                                <div class="col">
+                                                        <label class="mr-sm-2 " for="Q7" style="float:right">Q7-In school you're always willing to achieve the highest grade</label>
+                                                </div>
+                                                <div class="col">
+                                                        <select class="custom-select mr-sm-2" id="Q7">
+                                                            <option selected>Choose...</option>
+                                                            <option value="1">1 (Strongly Disagree)</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5 (Strongly Agree)</option>                
+                                                        </select>
+                                                </div>
+                                              </div>  
+
+                                              <div class="row">
+                                                    <div class="col">
+                                                            <label class="mr-sm-2 " for="Q8" style="float:right">Q8- Travel around the world is your life's priority</label>
+                                                    </div>
+                                                    <div class="col">
+                                                            <select class="custom-select mr-sm-2" id="Q8">
+                                                                <option selected>Choose...</option>
+                                                                <option value="1">1 (Strongly Disagree)</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5 (Strongly Agree)</option>                
+                                                            </select>
+                                                    </div>
+                                                  </div> 
+
+                                                  <div class="row">
+                                                        <div class="col">
+                                                                <label class="mr-sm-2 " for="Q9" style="float:right">Q9-In a job, you prefer to do something you love than something that pays you more</label>
+                                                        </div>
+                                                        <div class="col">
+                                                                <select class="custom-select mr-sm-2" id="Q9">
+                                                                    <option selected>Choose...</option>
+                                                                    <option value="1">1 (Strongly Disagree)</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5 (Strongly Agree)</option>                
+                                                                </select>
+                                                        </div>
+                                                      </div>
+
+                                                      <div class="row">
+                                                            <div class="col">
+                                                                    <label class="mr-sm-2 " for="Q10" style="float:right">Q10-How likely are you to drink beer</label>
+                                                            </div>
+                                                            <div class="col">
+                                                                    <select class="custom-select mr-sm-2" id="Q10">
+                                                                        <option selected>Choose...</option>
+                                                                        <option value="1">1 (Strongly Disagree)</option>
+                                                                        <option value="2">2</option>
+                                                                        <option value="3">3</option>
+                                                                        <option value="4">4</option>
+                                                                        <option value="5">5 (Strongly Agree)</option>                
+                                                                    </select>
+                                                            </div>
+                                                          </div>  
+
+        </form>
+
+
+            
+
+
+            <hr class="my-4">
+        <button class="btn btn-primary btn-lg" id='submit'>Submit</button>
+      <a href="/home">Go back |</a>
+      <a href="/api/friends">See friend list |</a>
+      <a id='clear' href='#'>Clear |</a>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+
+
+
+       $("#paste").on("click", function(event) {
+        async function paste(input) {
+        const text = await navigator.clipboard.readText();
+        $('#userPic').val(text);
+        console.log(text);
+        }
+        paste();
+       });
+
+       $("#submit").on("click", function(event) {
+           event.preventDefault();
+        var scores=[];
+        var flag=true;
+        if($("#name").val()==""||$("#userPic").val()==""){alert('Insert name and picture');return;}
+
+            for (let i = 0; i < 10; i++) {
+            value=$('#Q'+parseInt(i+1)).val();
+            
+            if (value=="Choose..."){alert('Q'+parseInt(i+1)+" is empty");flag=false;scores=[];break;}
+                else{scores[i]=value;}
+        }
+        var userProfile ={
+            name:$('#name').val().trim(),
+            picURL:$('#userPic').val().trim(),
+            scores: scores
+        }
+        console.log(userProfile);
+
+ if(flag==true){
+    var currentURL=window.location.origin;
+    $.post(currentURL+"/api/friends",userProfile, function(data){
+        if (data==true){}
+        else{alert(data+ "not uploaded")}
+    }).then(
+        function(){
+            $.ajax({url: currentURL + '/api/friends', method:'GET'}).done(function(tableData){
+                var result2 =[];
+                for (let i = 0; i < tableData.length-1; i++) {  
+                        var result=0;    
+                       for (let j = 0; j < userProfile.scores.length; j++) {
+                       result += Math.abs(parseInt(userProfile.scores[j])-parseInt(tableData[i].scores[j]))
+                       }
+                       result2.push(result);
+                }
+                var indexMin = result2.indexOf(Math.min.apply(Math, result2));
+                $("#nameFound").text(tableData[indexMin].name);
+                $("#picFound").attr("src",tableData[indexMin].picURL);
+                $("#show-results").modal({
+                        show: true,
+                        backdrop: 'static',
+                        keyboard: false
+                });
+
+
+            })
+
+        }
+    )
+
+}
+
+})
+
+$('#clear').on('click',function(){
+clearTable();
+location.realod();
+})
+
+function clearTable(){
+        var currentURL=window.location.origin;
+        $.ajax({url:currentURL+'/api/clear',method:'POST'})
+}
+      </script>
+
+<style>
+.jumbotron {
+            margin: 10rem;
+          }
+
+        @media screen and (max-width: 900px) {
+          .jumbotron {
+            margin: 1rem;
+          }
+
+          .display-4{
+              font-size: 30px;
+          }
+
+
+        }
+        </style>
+</body>
+</html>
